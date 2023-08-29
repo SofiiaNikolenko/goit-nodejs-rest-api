@@ -7,6 +7,11 @@ const ctrlDeleteContact = require("./contacts/deleteContact");
 const ctrlUpdateContact = require("./contacts/updateContact");
 const ctrlUpdateFavorite = require("./contacts/updateFavorite");
 
+const ctrlRegister = require("./auth/register");
+const ctrlLogin = require("./auth/login");
+const ctrlGetCurrent = require("./auth/getCurrent");
+const ctrlLogout = require("./auth/logout");
+
 module.exports = {
   ctrlGetAll: ctrlWrapper(ctrlGetAll),
   ctrlGetById: ctrlWrapper(ctrlGetById),
@@ -14,4 +19,9 @@ module.exports = {
   ctrlDeleteContact: ctrlWrapper(ctrlDeleteContact),
   ctrlUpdateContact: ctrlWrapper(ctrlUpdateContact),
   ctrlUpdateFavorite: ctrlWrapper(ctrlUpdateFavorite),
+
+  ctrlRegister: ctrlWrapper(ctrlRegister),
+  ctrlLogin: ctrlWrapper(ctrlLogin),
+  ctrlGetCurrent: ctrlWrapper(ctrlGetCurrent),
+  ctrlLogout: ctrlWrapper(ctrlLogout),
 };
