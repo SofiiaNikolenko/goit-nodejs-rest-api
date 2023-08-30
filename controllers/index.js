@@ -11,6 +11,7 @@ const ctrlRegister = require("./auth/register");
 const ctrlLogin = require("./auth/login");
 const ctrlGetCurrent = require("./auth/getCurrent");
 const ctrlLogout = require("./auth/logout");
+const ctrlUpdateAvatar = require("./auth/updateAvatar");
 
 module.exports = {
   ctrlGetAll: ctrlWrapper(ctrlGetAll),
@@ -24,4 +25,5 @@ module.exports = {
   ctrlLogin: ctrlWrapper(ctrlLogin),
   ctrlGetCurrent: ctrlWrapper(ctrlGetCurrent),
   ctrlLogout: ctrlWrapper(ctrlLogout),
+  ctrlUpdateAvatar: ctrlWrapper(ctrlUpdateAvatar),
 };
