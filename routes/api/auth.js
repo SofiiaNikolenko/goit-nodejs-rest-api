@@ -7,11 +7,21 @@ const {
   ctrlGetCurrent,
   ctrlLogout,
   ctrlUpdateAvatar,
+  ctrlVerifyEmail,
+  ctrlResendVerifyEmail,
 } = require("../../controllers");
 
 const router = express.Router();
 
 router.post("/register", validateBody(schemas.registerSchema), ctrlRegister);
+
+router.get("/verify/:verificationToken", ctrlVerifyEmail);
+
+router.post(
+  "/verify",
+  validateBody(schemas.emailSchema),
+  ctrlResendVerifyEmail
+);
 
 router.post("/login", validateBody(schemas.loginSchema), ctrlLogin);
 
